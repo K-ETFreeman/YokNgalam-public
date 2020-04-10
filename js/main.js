@@ -197,28 +197,6 @@ $(function () {
 
     //Effects
     {
-
-
-
-        gsap.fromTo(".gsap-title", {
-            css: {
-                scale: 3,
-                rotation: gsap.utils.wrap([parseInt(-180 + Math.random() * 360), parseInt(Math.random() * 360), parseInt(Math.random() * 360)]),
-                x: gsap.utils.wrap([-300, 0, 300]),
-                y: gsap.utils.wrap([Math.random() * 800 - 400, Math.random() * 800 - 400, Math.random() * 800 - 400])
-            },
-        }
-            , {
-                css: {
-                    x: 0,
-                    y: 0,
-                    scale: 1,
-                    rotation: 0
-                },
-                duration: gsap.utils.wrap([1, 1.2, 1.4]),
-                stagger: .2
-            });
-
         new WOW().init();
 
         var controller = new ScrollMagic.Controller();
