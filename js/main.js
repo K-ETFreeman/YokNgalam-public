@@ -232,7 +232,7 @@ $(function () {
 
         ScenePages.on('enter', function () {
             gsap.fromTo(".destination__pages li:first-child, .destination__pages li:nth-child(2), .number__first, .number__first+*, .number__first+*+*, .number__first+*+*+*, .number__first+*+*+*+*, .destination__pages li:nth-last-child(2), .destination__pages li:last-child",
-                { css: { y: -100 }, opacity: 0, ease: "elastic",  },
+                { css: {opacity: 0, y: -100 },  ease: "elastic",  },
                 { css: { opacity: 1, y: -0 }, ease: "elastic", duration: 1.5, stagger: .1 });
             setTimeout( ()=> $('.destination__pages li').css('opacity', 1), 1500);
             ScenePages.destroy();
