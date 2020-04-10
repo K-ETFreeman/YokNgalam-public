@@ -7,7 +7,35 @@ $(function () {
         $('.hat__burger').click(function () {
             $(this).toggleClass('active');
         });
+
+        $('.hat__home-button').click(function () {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $(".header").offset().top
+            }, 800);
+        });
+        $('.hat__review-button').click(function () {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $(".city").offset().top
+            }, 800);
+        });
+        $('.hat__destination-button').click(function () {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $(".destination").offset().top
+            }, 1200);
+        });
+        $('.hat__itinerary-button').click(function () {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $(".itinerary").offset().top
+            }, 1500);
+        });
+    
+        $('.hat__contact-button').click(function () {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $(".contact").offset().top
+            }, 1800);
+        });
     }
+
 
 
     $('.header__button').click(function () {
@@ -18,6 +46,14 @@ $(function () {
 
     //Places 
     {
+        $('.destination__toggleBlock *').click(function(){
+            $('.toggled').removeClass('toggled');
+            $(this).addClass('toggled');
+            $('.place').addClass('place_appeare');
+            setTimeout(() =>
+                $('.place').removeClass('place_appeare'), 500);
+        });
+
         $('.place__description').click(function () {
             $(this).parent().first().toggleClass('hidden')
         });
@@ -191,6 +227,12 @@ $(function () {
                 $(".datepicker").eq(i ? 0 : 1).datepicker("setDate", SecondDate);
             }
             );
+        });
+
+
+        $('.button').click(function(){
+            $(this).addClass('button_pressed');
+            setTimeout(() => $(this).removeClass('button_pressed'), 200);
         });
     }
 
