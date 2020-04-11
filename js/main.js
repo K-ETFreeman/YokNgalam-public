@@ -4,8 +4,12 @@ $(function () {
 
     //Hat 
     {
-        $('.hat__burger').click(function () {
-            $(this).toggleClass('active');
+        $('.hat__burger, .hat__menu a').click(function () {
+            $('.hat__burger').toggleClass('active');
+            if ($('.hat__burger').hasClass('active')) 
+                bodyScrollLock.disableBodyScroll(document.body);
+            else
+                bodyScrollLock.enableBodyScroll(document.body);
         });
 
         $('.hat__home-button').click(function () {
